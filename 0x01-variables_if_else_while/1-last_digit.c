@@ -28,7 +28,7 @@ int main(void)
 	{
 		if (last == 0)
 		{
-			printf("is 0\n");
+			printf("0\n");
 		}
 		else
 		{
