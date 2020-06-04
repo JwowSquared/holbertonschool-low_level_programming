@@ -2,10 +2,8 @@
 
 /**
  * jack_bauer - prints every minute of 1 day
- *
- * Return: exit function
  */
-void jack_bauer()
+void jack_bauer(void)
 {
 
 	int hr;
@@ -23,6 +21,4 @@ void jack_bauer()
 			_putchar('\n');
 		}
 	}
-
-	return (0);
 }
