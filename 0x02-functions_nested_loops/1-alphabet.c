@@ -11,14 +11,3 @@ void print_alphabet(void)
 		_putchar(c);
 	_putchar('\n');
 }
-
-/**
- * main - calls print_alphabet();
- *
- * Return: exit function
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
