@@ -12,7 +12,7 @@
 
 void print_remaining_days(int month, int day, int year)
 {
-	int common;
+
 /*
 *	if (year % 4 != 0)
 *		common = 1;
