@@ -26,14 +26,13 @@ int main(void)
 	}
 	else
 	{
-		printf("less than 6 and ");
 		if (last == 0)
 		{
 			printf("is 0\n");
 		}
 		else
 		{
-			printf("not 0\n");
+			printf("less than 6 and not 0\n");
 		}
 	}
 
