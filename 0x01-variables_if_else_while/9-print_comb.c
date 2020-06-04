@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char current = '0';
+	int current = 48;
 
 	while (current < 58)
 	{
