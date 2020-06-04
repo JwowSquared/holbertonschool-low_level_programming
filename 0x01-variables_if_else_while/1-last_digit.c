@@ -33,7 +33,7 @@ int main(void)
 		}
 		else
 		{
-			printf("is not 0\n");
+			printf("not 0\n");
 		}
 	}
 
