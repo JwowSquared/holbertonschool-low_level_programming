@@ -12,7 +12,8 @@ int main(void)
 	while (current < 58)
 	{
 		putchar(current);
-		if (current == '9') break;
+		if (current == '9')
+			break;
 		putchar(',');
 		putchar(' ');
 		current++;
