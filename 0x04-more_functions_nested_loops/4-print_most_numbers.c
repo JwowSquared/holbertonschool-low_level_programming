@@ -3,7 +3,7 @@
 /**
 * print_most_numbers - prints the numbers 0 - 9 but not 2 or 4
 */
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	int i;
 
