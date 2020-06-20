@@ -26,6 +26,7 @@ void print_number(int n)
 	int input;
 	int length = 0;
 	int result;
+	int negative = 1;
 
 	if (n == 0)
 	{
@@ -36,12 +37,12 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = n * -1;
+		negative = -1;
 	}
 
 	input = n;
 
-	while (input > 0)
+	while (input != 0)
 	{
 		input = input / 10;
 		length++;
@@ -49,7 +50,7 @@ void print_number(int n)
 
 	while (length > 0)
 	{
-		result = (n / _exp(10, length - 1)) % 10;
+		result = ((n * negative) / _exp(10, length - 1)) % 10;
 		_putchar(result + 48);
 		length--;
 	}
