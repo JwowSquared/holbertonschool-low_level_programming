@@ -7,9 +7,9 @@
 *
 * Return: base^ex
 */
-int _exp(int base, int ex)
+unsigned int _exp(int base, int ex)
 {
-	int result = 1;
+	unsigned int result = 1;
 
 	while (ex-- > 0)
 		result = result * base;
