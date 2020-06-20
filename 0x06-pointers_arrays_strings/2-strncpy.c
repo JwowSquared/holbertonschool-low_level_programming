@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-* _strncpy - overwrites destination string with source string, but only n characters
+* _strncpy - overwrites dest string with src string, but only n characters
 * @dest: destination string
 * @src: input string
 * @n: max amount of characters to be copied
