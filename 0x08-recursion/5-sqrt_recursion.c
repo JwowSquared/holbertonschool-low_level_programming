@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+* check - checks if n has a square root recursively
+* @n: number to check against
+* @x: potential square root, increments with recursion
+*
+* Return: square root of n, else -1 if no valid square root
+*/
 int check(int n, int x)
 {
 	if ((float)n / (float)x == (float)x)
