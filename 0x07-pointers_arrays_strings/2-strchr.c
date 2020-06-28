@@ -19,5 +19,8 @@ char *_strchr(char *s, char c)
 		find++;
 	}
 
+	if (c == '\0')
+		return (find);
+
 	return (0);
 }
