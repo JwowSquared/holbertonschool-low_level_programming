@@ -11,7 +11,6 @@ char *_strpbrk(char *s, char *accept)
 {
 	char *find = s;
 	int i;
-	
 
 	while (*find)
 	{
