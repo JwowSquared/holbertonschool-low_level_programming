@@ -42,25 +42,22 @@ char *ending(char *s)
 * @s: pointer to entire input string
 * @start: pointer to start of first number within string
 *
-* Return: -1 if more - signs than +, else 1
+* Return: -1 if odd number of - signs, else 1
 */
 int check_signs(char *s, char *start)
 {
-	int pos = 0;
 	int neg = 0;
 	int i = 0;
 
 	while (&s[i] != start)
 	{
-		if (s[i] == '+')
-			pos++;
 		if (s[i] == '-')
 			neg++;
 
 		i++;
 	}
 
-	if (neg > pos)
+	if (neg % 2 == 1)
 		return (-1);
 	return (1);
 }
