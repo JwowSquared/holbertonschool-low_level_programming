@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int i = 1;
-	int j = 0;
+	int j;
 	int result = 0;
 	int num;
 
@@ -24,9 +24,9 @@ int main(int argc, char *argv[])
 	while (i < argc)
 	{
 		j = 0;
-		while (argv[j])
+		while (argv[i][j])
 		{
-			if (!(*argv[j] >= '0' && *argv[i] <= '9'))
+			if (!(argv[i][j] >= '0' && argv[i][j] <= '9'))
 			{
 				printf("Error\n");
 				return (1);
