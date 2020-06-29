@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int i = 1;
+	int j = 0;
 	int result = 0;
 	int num;
 
@@ -22,6 +23,17 @@ int main(int argc, char *argv[])
 
 	while (i < argc)
 	{
+		j = 0;
+		while (argv[j])
+		{
+			if (!(*argv[j] >= '0' && *argv[i] <= '9'))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
+		}
+
 		num = atoi(argv[i]);
 		if (num == 0 && *argv[i] != '0' && result != 0)
 		{
