@@ -6,7 +6,7 @@ int _atoi (char *s)
 
 	while (*s)
 	{
-
+		s++;
 	}
 
 	return (result);
