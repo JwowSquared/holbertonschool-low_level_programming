@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
 * beginning - finds the first int-like char in the input string
 * @s: pointer to string to parse
