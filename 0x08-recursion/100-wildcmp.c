@@ -36,19 +36,5 @@ int helper(char *s1, char *s2)
 */
 int wildcmp(char *s1, char *s2)
 {
-	if (*s1 && *s2)
-	{
-		return (helper(s1, s2));
-	}
-	else if (!*s1)
-	{
-		while (*s2)
-		{
-			if (*s2 != '*')
-				return (0);
-			s2++;
-		}
-		return (1);
-	}
-	return (0);
+	return (helper(s1, s2));
 }
