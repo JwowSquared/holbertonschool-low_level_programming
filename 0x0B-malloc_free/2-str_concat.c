@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
 * str_concat - creates a new string that is s1 + s2
 * @s1: left string
@@ -34,13 +34,13 @@ char *str_concat(char *s1, char *s2)
 	if (p == NULL)
 		return (NULL);
 
-	while (i < total_size - 1 && s1[i] && s1_length > 0)
+	while (i < total_size - 1 && s1_length > 0 && s1[i])
 	{
 		p[i] = s1[i];
 		i++;
 	}
 
-	while (i < total_size - 1 && s2[j] && s2_length > 0)
+	while (i < total_size - 1 && s2_length > 0 && s2[i])
 	{
 		p[i] = s2[j];
 		i++;
