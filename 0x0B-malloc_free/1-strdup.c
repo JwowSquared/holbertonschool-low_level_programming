@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
-* _strdup - creates a copy of str in a new c string in memory and returns a pointer
+* _strdup - creates a copy of str in a new c string and returns a pointer
 * @str: string to be copied
 *
-* Return: pointer to new memory location, or NULL of str is NULL or malloc fails
+* Return: pointer to new string, or NULL of str is NULL or malloc fails
 */
 char *_strdup(char *str)
 {
@@ -24,7 +24,7 @@ char *_strdup(char *str)
 	if (p == NULL)
 		return (NULL);
 
-	while (i <= length)
+	while (i < length)
 	{
 		p[i] = str[i];
 		i++;
