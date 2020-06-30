@@ -40,10 +40,15 @@ int wildcmp(char *s1, char *s2)
 	{
 		return (helper(s1, s2));
 	}
-	else
+	else if (!*s1)
 	{
-		if (*s1 || *s2)
-			return (0);
-		return (1); /* Do we need a string to compare strings? */
+		while (*s2)
+		{
+			if (*s2 != '*')
+				return (0);
+			s2++;
+		}
+		return (1);
 	}
+	return (0);
 }
