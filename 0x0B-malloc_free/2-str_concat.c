@@ -34,13 +34,13 @@ char *str_concat(char *s1, char *s2)
 	if (p == NULL)
 		return (NULL);
 
-	while (i < total_size - 1 && s1[i])
+	while (i < total_size - 1 && s1[i] && s1_length > 0)
 	{
 		p[i] = s1[i];
 		i++;
 	}
 
-	while (i < total_size - 1 && s2[j])
+	while (i < total_size - 1 && s2[j] && s2_length > 0)
 	{
 		p[i] = s2[j];
 		i++;
