@@ -10,6 +10,7 @@
 void *malloc_checked(unsigned int b)
 {
 	void *out = malloc(b);
+
 	if (out == NULL)
 	{
 		free(out);
