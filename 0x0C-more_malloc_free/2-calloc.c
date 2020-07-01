@@ -8,7 +8,7 @@
 *
 * Return: pointer to new array, else NULL on failure
 */
-void *_calloc(unsigned int nmemb, unsigned int size)
+void *_xcalloc(unsigned int nmemb, unsigned int size)
 {
 	char *out;
 	unsigned int i = 0;
