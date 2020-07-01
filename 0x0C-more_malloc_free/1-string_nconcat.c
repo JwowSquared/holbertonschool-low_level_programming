@@ -30,10 +30,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	out = malloc(sizeof(char) * length);
 	if (out == NULL)
-	{
-		free(out);
 		return (NULL);
-	}
+
+	i--;
+	out[length--] = '\0';
 
 	while (i >= 0)
 		out[length--] = s2[i--];
