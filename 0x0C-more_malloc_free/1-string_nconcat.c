@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
 * string_nconcat - concats n bytes of s2 to s1 in new memory
 * @s1: left string, always copied in full
@@ -27,8 +27,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		length++;
 		i++;
 	}
-
-	out = malloc(sizeof(char) * length);
+	printf("%d\n", length);
+	out = malloc(sizeof(char) * (length + 1));
 	if (out == NULL)
 		return (NULL);
 
