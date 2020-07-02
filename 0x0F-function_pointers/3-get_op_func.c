@@ -1,10 +1,11 @@
 #include "3-calc.h"
 #include <stddef.h>
+
 /**
-* get_op_func - how do i document this
+* get_op_func - returns functionality based on input character
 * @s: input character
 *
-* Return: something
+* Return: function pointer matching input character
 */
 int (*get_op_func(char *s))(int, int)
 {
@@ -18,7 +19,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 
-	while (*(ops[i].op))
+	while (i < 5)
 	{
 		if (*(ops[i].op) == *s)
 			return (ops[i].f);
