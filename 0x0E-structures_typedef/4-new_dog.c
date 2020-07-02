@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
-* new_dog: takes constructor parameters and mallocs a new dog_t object
+* new_dog - takes constructor parameters and mallocs a new dog_t object
 * @name: string to be copied into name
 * @age: value to be stored in age
 * @owner: string to be copied into owner
@@ -18,14 +18,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (output == NULL)
 		return (NULL);
 
-	while(name[length_name])
+	while (name[length_name])
 		length_name++;
 
 	output->name = malloc(sizeof(char) * length_name);
 	if (output->name == NULL)
 		return (NULL);
 
-	while(owner[length_owner])
+	while (owner[length_owner])
 		length_owner++;
 
 	output->owner = malloc(sizeof(char) * length_owner);
@@ -35,10 +35,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for(i = 0; i <= length_name; i++)
+	for (i = 0; i <= length_name; i++)
 		output->name[i] = name[i];
 
-	for(i = 0; i <= length_owner; i++)
+	for (i = 0; i <= length_owner; i++)
 		output->owner[i] = owner[i];
 
 	output->age = age;
