@@ -1,7 +1,17 @@
 #ifndef _DOG_
 #define _DOG_
 
-typedef struct dog {
+
+/**
+* struct dog - example struct
+* @name: thing you call the dog
+* @age: how long the dog has been
+* @owner: thing you call the person that owns the dog
+*
+* Description: first example struct to practice typdef and member access
+*/
+typedef struct dog
+{
 	char *name;
 	float age;
 	char *owner;
