@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+* main - performs basic math operations on input integers
+* @argc: number of command arguments. must be 4
+* @argv: double array of command arguments
+*
+* Return: 0 on success, 1 on Error
+*/
 int main(int argc, char **argv)
 {
 	int (*f)(int, int);
