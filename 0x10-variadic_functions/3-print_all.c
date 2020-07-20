@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 #include <string.h>
 #include <stdarg.h>
+#include <stdio.h>
 
 /**
 * print_all - prints anything you give it using printf
@@ -78,6 +79,7 @@ void print_f(va_list input)
 void print_s(va_list input)
 {
 	char *out = va_arg(input, char *);
+
 	if (out == NULL)
 		out = "(nil)";
 	printf("%s", out);
