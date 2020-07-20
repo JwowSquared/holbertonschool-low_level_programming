@@ -9,9 +9,15 @@
 */
 void print_all(const char * const format, ...)
 {
-	int i = 0, size;
+	int i = 0, j = 0, size;
 	va_list input;
-	char *out;
+	char *s = "";
+	spec specs[] = {
+		{"c", &print_c},
+		{"i", &print_i},
+		{"f", &print_f},
+		{"s", &print_s}
+	};
 
 	size = strlen(format);
 
@@ -19,33 +25,61 @@ void print_all(const char * const format, ...)
 
 	while (i < size)
 	{
-		switch (format[i])
+		printf("%s", s);
+		s = "";
+		j = 0;
+		while (j < 4)
 		{
-			case 'c':
-				printf("%c", va_arg(input, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(input, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(input, double));
-				break;
-			case 's':
-				out = va_arg(input, char *);
-				if (out == NULL)
-					out = "(nil)";
-				printf("%s", out);
-				break;
-			default:
-				i++;
-				continue;
+			if (*(specs[j].key) == format[i])
+			{
+				s = ", ";
+				specs[j].f(input);
+			}
+			j++;
 		}
-		if (i + 1 != size)
-			printf(", ");
 		i++;
 	}
 
 	va_end(input);
 
 	printf("\n");
+}
+
+/**
+* print_c - handles spec c
+* @input: va_list
+*/
+void print_c(va_list input)
+{
+	printf("%c", va_arg(input, int));
+}
+
+/**
+* print_i - handles spec i
+* @input: va_list
+*/
+void print_i(va_list input)
+{
+	printf("%d", va_arg(input, int));
+}
+
+/**
+* print_f - handles spec f
+* @input: va_list
+*/
+void print_f(va_list input)
+{
+	printf("%f", va_arg(input, double));
+}
+
+/**
+* print_s - handles spec s
+* @input: va_list
+*/
+void print_s(va_list input)
+{
+	char *out = va_arg(input, char *);
+	if (out == NULL)
+		out = "(nil)";
+	printf("%s", out);
 }
