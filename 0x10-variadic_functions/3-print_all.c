@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-#include <string.h>
 #include <stdarg.h>
 #include <stdio.h>
 
@@ -9,7 +8,7 @@
 */
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0, size;
+	int i = 0, j = 0;
 	va_list input;
 	char *s = "";
 	spec specs[] = {
@@ -19,11 +18,9 @@ void print_all(const char * const format, ...)
 		{"s", &print_s}
 	};
 
-	size = strlen(format);
-
 	va_start(input, format);
 
-	while (i < size)
+	while (format[i])
 	{
 		printf("%s", s);
 		s = "";
