@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
-* print_numbers - variadic function that prints all input integers, separated by separator
+* print_numbers - variadic function that prints all input integers,
+* separated by separator
 * @separator: character to separate prints with
 * @n: number of variadric arguments
 */
