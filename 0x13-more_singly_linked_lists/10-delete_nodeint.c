@@ -1,12 +1,11 @@
 #include "lists.h"
 
 /**
-* insert_nodeint_at_index - doesn't really leave much to the imagination
+* delete_nodeint_at_index - doesn't really leave much to the imagination
 * @head: double pointer to head of list
-* @idx: index to insert new node at
-* @n: value to store in new node
+* @idx: index to delete node at
 *
-* Return: pointer to new node
+* Return: 1 on success, -1 otherwise
 */
 int delete_nodeint_at_index(listint_t **head, unsigned int idx)
 {
