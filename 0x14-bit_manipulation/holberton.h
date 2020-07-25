@@ -12,7 +12,6 @@ int clear_bit(unsigned long int *n, unsigned int index);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
 int _putchar(char c);
 
-unsigned int binary_to_uint_recursion(const char *b, int length, int i);
-unsigned int _exp(char c, int power);
+void print_binary_recursion(unsigned long int n);
 
 #endif /* _HOLBERTON_H_ */
