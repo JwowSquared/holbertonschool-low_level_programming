@@ -3,16 +3,16 @@ global _start
 section .text
 
 _start:
-	mov rax, 1
-	mov rdi, 1
-	mov rsi, msg
-	mov rdx, msglen
-	syscall
+	mov edx,len
+	mov ecx,msg
+	mov ebx,1
+	mov eax,4
+	int 0x80
 
-	mov rax, 60
-	mov rdi, 0
-	syscall
+	mov ebx,0
+	mov eax,1
+	int 0x80
 
-section .rodata
-	msg: db "Hello, Holberton\n", 10
-	msglen: equ $ - msg
+section .data
+	msg db "Hello, Holberton\n",0xa
+	len equ $ - msg
