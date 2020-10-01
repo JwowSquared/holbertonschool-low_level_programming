@@ -9,8 +9,8 @@
 */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	hash_node_t *list;
-	unsigned long int idx;
+	hash_node_t *list = NULL;
+	unsigned long int idx = 0;
 
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
